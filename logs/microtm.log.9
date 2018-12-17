@@ -1,0 +1,128 @@
+2018-12-16 13:01:46,424 ERROR: Exception on /simulacia/<name>/<druh>/<vstup> [POST] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 199, in simulacia
+    df,list_of_table,stroj, list_of_tape, length, cycle, cross_number = table.xntm_table_final(name,vstup,final)
+  File "C:\python\TM_final-master\table\table.py", line 775, in xntm_table_final
+    for s,t,c, tape_symbol, current_state,tapes, directions, cycle, crossnumber in generator:
+  File "C:\python\TM_final-master\turing_machine\xntm.py", line 587, in _validate_input_yield_final
+    yield None,None,None,input_symbolss,current_state, all_tape, current, cycle, crossnumber
+NameError: name 'all_tape' is not defined
+2018-12-16 13:02:06,267 INFO: Microtm startup [in C:\python\TM_final-master\app\__init__.py:46]
+2018-12-16 13:02:26,007 ERROR: Exception on /simulacia/<name>/<druh>/<vstup> [POST] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 199, in simulacia
+    df,list_of_table,stroj, list_of_tape, length, cycle, cross_number = table.xntm_table_final(name,vstup,final)
+  File "C:\python\TM_final-master\table\table.py", line 775, in xntm_table_final
+    for s,t,c, tape_symbol, current_state,tapes, directions, cycle, crossnumber in generator:
+  File "C:\python\TM_final-master\turing_machine\xntm.py", line 582, in _validate_input_yield_final
+    if current_state in self.final_states:
+TypeError: 'in <string>' requires string as left operand, not tuple
+2018-12-16 13:02:55,875 ERROR: Exception on /simulacia/32/xntm/11 [GET] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 199, in simulacia
+    df,list_of_table,stroj, list_of_tape, length, cycle, cross_number = table.xntm_table_final(name,vstup,final)
+  File "C:\python\TM_final-master\table\table.py", line 775, in xntm_table_final
+    for s,t,c, tape_symbol, current_state,tapes, directions, cycle, crossnumber in generator:
+  File "C:\python\TM_final-master\turing_machine\xntm.py", line 582, in _validate_input_yield_final
+    if current_state in self.final_states:
+TypeError: 'in <string>' requires string as left operand, not tuple
+2018-12-16 13:04:33,130 ERROR: Exception on /simulacia/<name>/<druh>/<vstup> [POST] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 199, in simulacia
+    df,list_of_table,stroj, list_of_tape, length, cycle, cross_number = table.xntm_table_final(name,vstup,final)
+  File "C:\python\TM_final-master\table\table.py", line 775, in xntm_table_final
+    for s,t,c, tape_symbol, current_state,tapes, directions, cycle, crossnumber in generator:
+  File "C:\python\TM_final-master\turing_machine\xntm.py", line 582, in _validate_input_yield_final
+    if current_state in self.final_states:
+TypeError: 'in <string>' requires string as left operand, not tuple
+2018-12-16 14:08:11,642 ERROR: Exception on /simulacia/<name>/<druh>/<vstup> [POST] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 199, in simulacia
+    df,list_of_table,stroj, list_of_tape, length, cycle, cross_number = table.xntm_table_final(name,vstup,final)
+  File "C:\python\TM_final-master\table\table.py", line 775, in xntm_table_final
+    for s,t,c, tape_symbol, current_state,tapes, directions, cycle, crossnumber in generator:
+  File "C:\python\TM_final-master\turing_machine\xntm.py", line 582, in _validate_input_yield_final
+    if current_state in self.final_states:
+TypeError: 'in <string>' requires string as left operand, not tuple
+2018-12-16 14:09:31,616 ERROR: Exception on /simulacia/<name>/<druh>/<vstup> [POST] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 199, in simulacia
+    df,list_of_table,stroj, list_of_tape, length, cycle, cross_number = table.xntm_table_final(name,vstup,final)
+  File "C:\python\TM_final-master\table\table.py", line 775, in xntm_table_final
+    for s,t,c, tape_symbol, current_state,tapes, directions, cycle, crossnumber in generator:
+  File "C:\python\TM_final-master\turing_machine\xntm.py", line 582, in _validate_input_yield_final
+    if current_state in self.final_states:
+TypeError: 'in <string>' requires string as left operand, not tuple
+2018-12-16 14:12:42,656 INFO: Microtm startup [in C:\python\TM_final-master\app\__init__.py:46]

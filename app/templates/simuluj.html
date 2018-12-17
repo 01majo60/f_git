@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<html>
+<head>
+    <title>Form</title>
+    <meta http-equiv="refresh" content={{content}} >
+</head>
+<body>
+    <form action="" method="POST">
+    <input type="submit" value="Stop" name="Stop"/>
+    </form>
+    
+    <p></p> 
+    <form action="/simuluj">
+        
+    Vstupná abeceda: {{data1}}
+    <p></p>
+    {{ dataframe|safe }}  
+    <p></p>
+    {{ dataframe1|safe }}  
+    <p></p>
+    {{ dataframe2|safe }} 
+    <p></p>
+    {{ dataframe3|safe }}
+    <p></p>
+    {{ dataframe4|safe }}
+    <p></p>
+    {{ dataframe5|safe }}
+    <p></p>
+    {{ dataframe6|safe }}
+        <p></p>
+    {{ data.render(classes="table table-hover") | safe}}
+    </form>
+    
+</body>
+</html>
+{% endblock %}
+
+

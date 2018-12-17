@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Nápoveda k vytvoreniu TM</h1>
+<div class="text-left" style="width: 100rem;">
+<p>Formát zápisu vo formulári je rovnaký pre deterministický, nedeterministický, jedno i viac-páskový Turingov stroj, jediný rozdiel je pri zápise prechodovej funkcie.</p><UL>
+    <LI>Do políčka <b>"Q - množina stavov"</b> zapíšeme množinu stavov reprezentovanú reťazcom, každý stav je od ďalšieho stavu oddelený čiarkou (napríklad: q0, q1, q2, q3, q4, qacc, qrej).</LI>
+    <p></p>
+    <LI>Do políčka <b>"Σ- množina vstupných symbolov"</b> zapíšeme množinu vstupných symbolov reprezentovanú reťazcom, každý symbol je od ďalšieho symbolu oddelený čiarkou (napríklad: 0,1).</LI>
+    <p></p>
+    <LI>Do políčka <b>"Γ- množina páskových symbolov"</b> zapíšeme množinu páskových symbolov, každý symbol je od ďalšieho symbolu oddelený čiarkou (napríklad: 0,1,x,y,>,.).</LI>
+    <p></p>
+    <LI>Ak necháme políčko <b>"Ľavá koncová značka"</b> prázdne, tak sa nám za ľavú koncovú značku zvolí symbol >, ak to chceme zmeniť tak zapíšeme do kolónky symbol, ktorý bude označovať ľavú koncovú značku, po ktorom nenasleduje ani čiarka ani žiaden znak.</LI>
+    <p></p>
+    
+    <LI>Do políčka <b>"Prechodová funkcia"</b> zapisujeme prechodovú funkciu Turingovho stroja. Zápis prechodovej funkcie začína a končí zloženými zátvorkami"{}". Každý stav, symbol alebo smer prechodu v prechodovej funkcii sa nachádza medzi úvodzovkami (’ ’). Po zloženej zátvorke nasleduje stav za ktorým nasleduje dvojbodka a zložená zátvorka (napríklad: ’q0’:{). Po stave nasleduje symbol po ktorom je dvojbodka (napríklad ’>’:). Nasleduje konfigurácia pre daný stav a symbol za ktorou sa nachádza čiarka. Medzery a rôzne odsadenia nie sú podstatné a sú ignorované.
+        <p></p>
+        <UL>
+        <LI>Pri <b>nedeterministickom Turingovom stroji</b> je rozdiel oproti deterministickému v tom, že môže byť viacej konfigurácií pre daný stav a symbol a nachádzajú sa v zložených zátvorkách.</LI><p></p>
+        <LI>Pri <b>viac-páskovom deterministickom Turingovom stroji</b> je rozdiel oproti deterministickému v tom, že páskové symboly pre daný stav sa nachádzajú v zátvorkách.</LI><p></p>
+        <LI>Pri <b>viac-páskovom nedeterministickom Turingovom stroji</b> je rozdiel oproti deterministickému v tom, že konfigurácie pre daný stav a symbol sa nachádzajú v zložených zátvorkách a páskové symboly pre daný stav sa nachádzajú v zátvorkách.</LI></UL></LI>
+    <p></p>
+    <LI>Do políčka <b>"Počiatočný stav"</b> zapíšeme počiatočný stav (napríklad: q0), po ktorom nenasleduje ani čiarka ani žiaden znak (ak ostane políčko prázdne, tak je prednastavený počiatočný stav q0).</LI>
+    <p></p>
+    <LI><b>"Symbol označujúci prázdne políčko"</b> ak ostane políčko prázdne,tak sa nám zvolí znak _ ako symbol označujúci prázdne políčko, ak to chceme zmeniť tak zapíšeme do kolónky symbol, ktorý bude označovať prázdne políčko, po ktorom nenasleduje ani čiarka ani žiaden iný znak.</LI>
+    <p></p>
+    <LI>Do políčka <b>"Zamietajúci stav"</b> zapíšeme zamietajúci stav (napríklad: qrej), po ktorom nepíšeme čiarku ani žiaden iný znak (ak ostane políčko prázdne, tak je prednastavený zamietajúci stav qrej).</LI>
+    <p></p>
+    <LI>Do políčka <b>”Akceptujúci stav"</b> zapíšeme akceptujúci stav (napríklad: qacc), po ktorom nepíšeme čiarku ani žiaden iný znak (ak ostane políčko prázdne, tak je prednastavený akceptujúci stav qacc).</LI>
+    </UL>
+</div>  
+{% endblock %}
+
+
+

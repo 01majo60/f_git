@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <form action="/" method="Post" enctype = "multipart/form-data">
+        {{ form.csrf_token }}
+        {{ form.opts }} 
+        <input type="submit" value="Vyber TM" name="Vyber TM"/>
+        <ul>
+            {% for error in form.opts.errors %}
+            <li style="color:red;">{{ error }}</li>
+            {% endfor %}
+        </ul>
+        <input type="file" name="file"/>
+        <input type="submit" value="Nahraj TM" name="Nahraj TM"/>
+    </form>
+    
+</body>
+</html>
+{% endblock %}
+
+

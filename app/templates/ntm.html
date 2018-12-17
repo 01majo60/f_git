@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>Vytvor nový NTM</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.funkcia.label }}<br>
+            {{ form.funkcia(size=64, placeholder = 'napríklad: NTM') }}<br>
+            {% for error in form.funkcia.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.states.label }}<br>
+            {{ form.states(size=64, placeholder = 'napríklad: q0, q1, q2, q3, q4, q5, qacc, qrej') }}<br>
+            {% for error in form.states.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.input_symbols.label }}<br>
+            {{ form.input_symbols(size=64, placeholder = 'napríklad: 0,1') }}<br>
+            {% for error in form.input_symbols.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.tape_symbols.label }}<br>
+            {{ form.tape_symbols(size=64, placeholder = 'napríklad: 0,1, x, y, >, _') }}<br>
+            {% for error in form.tape_symbols.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.left_end.label }}<br>
+            {{ form.left_end(size=64, placeholder = '>') }}<br>
+            {% for error in form.left_end.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.prechody.label }}<br>
+            {{ form.prechody(cols=64, rows=10, placeholder = "napríklad: 
+            {
+                'q0':{
+                    '>': {('q1', '>', 'R')}
+                    },
+                'q1':{
+                    '0': {('q5', '0', 'R'), ('qrej', '0', 'R'), ('q2', 'x', 'R')},
+                    'y': {('q4', 'y', 'R')}
+                    },
+                'q2':{
+                    '0': {('q2', '0', 'R')},
+                    '1': {('q3', 'y', 'L'), ('qrej', '1', 'R')},
+                    'y': {('q2', 'y', 'R')}
+                    },
+                'q3':{
+                    '0': {('q3', '0', 'L')},
+                    'x': {('q1', 'x', 'R')},
+                    'y': {('q3', 'y', 'L')}
+                    },
+                'q4':{
+                    'y': {('q4', 'y', 'R')},
+                    '_': {('qacc', '_', 'R')}
+                    },
+                'q5':{
+                    '0': {('q5', '0', 'R')},
+                    '_': {('qrej', '0', 'R')}
+                    }
+            }") }}<br>
+            {% for error in form.prechody.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p> 
+        <p>
+            {{ form.initial_state.label }}<br>
+            {{ form.initial_state(size=64, placeholder = 'q0') }}<br>
+            {% for error in form.initial_state.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>  
+        <p>
+            {{ form.blank_symbol.label }}<br>
+            {{ form.blank_symbol(size=64, placeholder = '_') }}<br>
+            {% for error in form.blank_symbol.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>  
+        <p>
+            {{ form.reject_state.label }}<br>
+            {{ form.reject_state(size=64, placeholder = 'qrej') }}<br>
+            {% for error in form.reject_state.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>  
+        <p>
+            {{ form.final_states.label }}<br>
+            {{ form.final_states(size=64, placeholder = 'qacc') }}<br>
+            {% for error in form.final_states.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>  
+
+        <p>{{ form.submit() }}
+            <input type="submit" value="Ulož do PC" name="Ulož do PC"/>
+        </p>
+    </form>
+{% endblock %}

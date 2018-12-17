@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <form action="/vstup/<name>/<druh>" method="POST">
+        {{ form.csrf_token }}
+        {{ form.opts }} 
+        {{ form.submit() }}
+
+        <input type="text" name="vstup" placeholder="vstupné slovo" /> <input type="submit" value="Zapíš na pásku" name="Vstup"/> 
+    </form>
+
+Vstupná abeceda: {{data1}}
+<p></p>
+{{ dataframe|safe }}
+</body>
+</html>
+{% endblock %}
+
+

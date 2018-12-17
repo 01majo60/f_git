@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>Nastala neočakávaná chyba</h1>
+    <p>Prosím kontaktujte administrátora. Ospravedlňujem sa za nepríjemnosť!</p>
+    <p><a href="{{ url_for('main.index') }}">Späť</a></p>
+{% endblock %}

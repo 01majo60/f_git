@@ -1,0 +1,127 @@
+2018-12-16 14:30:27,899 ERROR: Exception on /simulacia/<name>/<druh>/<vstup> [POST] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 459, in simulacia
+    return render_template("simulacia.html",form=form,data1 = input_symbols, vstup = placeholder,dataframe = dfz[0].to_html(),dataframe1 = dfz[1].to_html() ,data = dff)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\python\TM_final-master\app\templates\simulacia.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\python\TM_final-master\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\python\TM_final-master\app\templates\base.html", line 44, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\python\TM_final-master\app\templates\simulacia.html", line 44, in block "app_content"
+    {{ data.render(classes="table table-hover") | safe}}
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\io\formats\style.py", line 437, in render
+    self._compute()
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\io\formats\style.py", line 505, in _compute
+    r = func(self)(*args, **kwargs)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\io\formats\style.py", line 595, in _applymap
+    result = self.data.loc[subset].applymap(func)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1367, in __getitem__
+    return self._getitem_tuple(key)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 858, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 991, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1616, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1115, in _getitem_iterable
+    self._has_valid_type(key, axis)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1472, in _has_valid_type
+    key=key, axis=self.obj._get_axis_name(axis)))
+KeyError: "None of [('1', '#')] are in the [index]"
+2018-12-16 14:30:59,312 ERROR: Exception on /simulacia/32/xntm/1111 [GET] [in c:\python\tm_final-master\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\python\TM_final-master\app\main\routes.py", line 445, in simulacia
+    return render_template("simulacia.html",form=form,data1 = input_symbols, vstup = placeholder,dataframe = dfz[0].to_html(),dataframe1 = dfz[1].to_html() ,data = dff)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\python\tm_final-master\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\python\TM_final-master\app\templates\simulacia.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\python\TM_final-master\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\python\tm_final-master\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\python\TM_final-master\app\templates\base.html", line 44, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\python\TM_final-master\app\templates\simulacia.html", line 44, in block "app_content"
+    {{ data.render(classes="table table-hover") | safe}}
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\io\formats\style.py", line 437, in render
+    self._compute()
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\io\formats\style.py", line 505, in _compute
+    r = func(self)(*args, **kwargs)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\io\formats\style.py", line 595, in _applymap
+    result = self.data.loc[subset].applymap(func)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1367, in __getitem__
+    return self._getitem_tuple(key)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 858, in _getitem_tuple
+    return self._getitem_lowerdim(tup)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 991, in _getitem_lowerdim
+    section = self._getitem_axis(key, axis=i)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1616, in _getitem_axis
+    return self._getitem_iterable(key, axis=axis)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1115, in _getitem_iterable
+    self._has_valid_type(key, axis)
+  File "c:\python\tm_final-master\venv\lib\site-packages\pandas\core\indexing.py", line 1472, in _has_valid_type
+    key=key, axis=self.obj._get_axis_name(axis)))
+KeyError: "None of [('1', '#')] are in the [index]"
+2018-12-16 14:34:24,331 INFO: Microtm startup [in C:\python\TM_final-master\app\__init__.py:46]

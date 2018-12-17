@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <form action="/simulacia/<name>/<druh>/<vstup>" method="POST">
+        {{ form.csrf_token }}
+        {{ form.opts }} 
+        {{ form.submit() }}
+        
+        <input type="text" name="vstup" placeholder={{vstup}} /> <input type="submit" value="Zapíš na pásku" name="Vstup"/> 
+        <p></p> 
+        <input type="submit" value="Krok vpred" name="Krok vpred"/>
+        <input type="submit" value="Krok späť" name="Krok späť" />
+        <input type="text" name="cas" placeholder="Časové oneskorenie" /> 
+        <input type="submit" value="Simulácia" name="Simulácia" />
+        <p></p>
+        <input type="submit" value="1" name="1" />
+        <input type="submit" value="2" name="2" />
+        <input type="submit" value="3" name="3" />
+        <input type="submit" value="4" name="4" />
+        <input type="submit" value="5" name="5" />
+        <input type="submit" value="6" name="6" />
+
+
+        <ul>
+            {% for error in form.opts.errors %}
+            <li style="color:red;">{{ error }}</li>
+            {% endfor %}
+        </ul> 
+    </form>
+Vstupná abeceda: {{data1}}
+    <p></p>
+    {{ dataframe|safe }}  
+    <p></p>
+    {{ dataframe1|safe }}  
+    <p></p>
+    {{ dataframe2|safe }} 
+    <p></p>
+    {{ dataframe3|safe }}
+    <p></p>
+    {{ dataframe4|safe }}
+    <p></p>
+    {{ dataframe5|safe }}
+    <p></p>
+    {{ dataframe6|safe }}
+<p></p>
+{{ data.render(classes="table table-hover") | safe}}
+</body>
+</html>
+{% endblock %}
+
+
